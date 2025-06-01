@@ -124,7 +124,7 @@ edgeSideBarDirection: EdgeSideBarDirection.right,
 
 ## Example
 
-Check out the [example](https://github.com/mo7amedaliEbaid/samsung_side_bar/tree/main/example) directory for a complete implementation.
+Check out the [example](https://github.com/mo7amedaliEbaid/edge_sidebar/tree/main/example) directory for a complete implementation.
 
 ## Contributing
 
@@ -136,9 +136,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Support
 
-If you encounter any issues or have questions, please [open an issue](https://github.com/mo7amedaliEbaid/samsung_side_bar/issues).
+If you encounter any issues or have questions, please [open an issue](https://github.com/mo7amedaliEbaid/edge_sidebar/issues).
 
 ## 🔗 Links
 
-* [GitHub Repository](https://github.com/mo7amedaliEbaid/samsung_side_bar.git)
-* [Issues & Feedback](https://github.com/mo7amedaliEbaid/samsung_side_bar/issues)
+* [GitHub Repository](https://github.com/mo7amedaliEbaid/edge_sidebar.git)
+* [Issues & Feedback](https://github.com/mo7amedaliEbaid/edge_sidebar/issues)
