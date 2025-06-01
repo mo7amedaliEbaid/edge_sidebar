@@ -2,6 +2,13 @@
 
 A Flutter package that provides a customizable side panel widget inspired by Samsung's Edge Panel. This widget can be positioned on any side of the screen (left, right, top, or bottom) and includes smooth animations, customizable styling, and a flexible layout system.
 
+## 📺 Demo
+
+Tap to see it in action:
+
+👉 [**Watch Demo Video**](https://youtube.com/shorts/zehq_kdwdYA?si=f__FXDveljRuWQMT)
+
+
 ## Features
 
 - 🎯 Multiple positioning options (left, right, top, bottom)
