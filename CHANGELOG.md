@@ -1,0 +1,13 @@
+# Changelog
+
+## 1.0.0
+
+* Initial release
+* Support for all four directions (left, right, top, bottom)
+* Customizable appearance and animations
+* Flexible layout system
+* Support for both vertical and horizontal layouts
+* Customizable toggle button
+* Precise positioning control
+* Gradient background support
+* Safe area awareness 
