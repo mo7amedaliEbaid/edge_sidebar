@@ -17,9 +17,9 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
 version: 0.0.1-beta.1
-homepage: https://github.com/mo7amedaliEbaid/samsung_side_bar
-repository: https://github.com/mo7amedaliEbaid/samsung_side_bar.git
-issue_tracker: https://github.com/mo7amedaliEbaid/samsung_side_bar/issues
+homepage: https://github.com/mo7amedaliEbaid/edge_sidebar
+repository: https://github.com/mo7amedaliEbaid/edge_sidebar.git
+issue_tracker: https://github.com/mo7amedaliEbaid/edge_sidebar/issues
 
 environment:
   sdk: '>=3.0.0 <4.0.0'

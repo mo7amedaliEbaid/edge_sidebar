@@ -83,7 +83,7 @@ class MyApp extends StatelessWidget {
 
 ```dart
 EdgeSideBar(
-edgeSideBarDirection: EdgeSideBarDirection.right,
+  edgeSideBarDirection: EdgeSideBarDirection.right,
   topOffset: 150,
   rightOffset: 10,
   width: 80,
