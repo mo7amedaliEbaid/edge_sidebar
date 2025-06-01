@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.0
+## 0.0.1-beta.1
 
 * Initial release
 * Support for all four directions (left, right, top, bottom)
