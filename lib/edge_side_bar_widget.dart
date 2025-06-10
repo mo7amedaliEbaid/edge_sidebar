@@ -8,6 +8,13 @@ enum EdgeSideBarDirection {
   bottom,
 }
 
+/// Enum to define how the sidebar can be triggered
+enum SidebarTriggerMode {
+  tap,
+  swipe,
+  both,
+}
+
 class EdgeSideBar extends StatefulWidget {
   /// List of widgets to show inside the sidebar
   final List<Widget> children;
@@ -38,6 +45,9 @@ class EdgeSideBar extends StatefulWidget {
 
   /// Direction from which the sidebar should appear (left, right, top, or bottom)
   final EdgeSideBarDirection edgeSideBarDirection;
+
+  ///  To define how the sidebar can be triggered
+  final SidebarTriggerMode triggerMode;
 
   /// Top position of the sidebar from the screen
   final double topOffset;
@@ -72,6 +82,7 @@ class EdgeSideBar extends StatefulWidget {
     this.initialExpanded = true,
     this.toggleButton,
     this.edgeSideBarDirection = EdgeSideBarDirection.right,
+    this.triggerMode = SidebarTriggerMode.both,
     this.topOffset = 170,
     this.sidebarLeftOffset = 0,
     this.toggleTopOffset = 80,
@@ -92,6 +103,7 @@ class _EdgeSideBarState extends State<EdgeSideBar>
   late AnimationController _controller;
   late Animation<Offset> _slideAnimation;
   late bool _isExpanded;
+  double _dragDistance = 0;
 
   @override
   void initState() {
@@ -240,7 +252,31 @@ class _EdgeSideBarState extends State<EdgeSideBar>
                       : null,
               right: isLeft ? null : 0,
               child: GestureDetector(
-                onTap: _toggleSidebar,
+                onTap: () {
+                  if (widget.triggerMode == SidebarTriggerMode.tap ||
+                      widget.triggerMode == SidebarTriggerMode.both) {
+                    _toggleSidebar();
+                  }
+                },
+                onPanUpdate: (details) {
+                  if (widget.triggerMode == SidebarTriggerMode.swipe ||
+                      widget.triggerMode == SidebarTriggerMode.both) {
+                    _dragDistance += details.delta.dx;
+                  }
+                },
+                onPanEnd: (details) {
+                  if (widget.triggerMode == SidebarTriggerMode.swipe ||
+                      widget.triggerMode == SidebarTriggerMode.both) {
+                    // Define threshold as a fraction of the toggle button width
+                    final swipeThreshold = widget.toggleButtonWidth * 0.3;
+
+                    if (_dragDistance.abs() > swipeThreshold) {
+                      _toggleSidebar();
+                    }
+
+                    _dragDistance = 0; // Reset
+                  }
+                },
                 child: widget.toggleButton ??
                     Container(
                       height: isTop || isBottom

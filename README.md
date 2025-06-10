@@ -27,7 +27,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  edge_sidebar: ^0.0.1-beta.1
+  edge_sidebar: ^0.0.1
 ```
 
 ## Usage
@@ -84,6 +84,7 @@ class MyApp extends StatelessWidget {
 ```dart
 EdgeSideBar(
   edgeSideBarDirection: EdgeSideBarDirection.right,
+  triggerMode: SidebarTriggerMode.both,
   topOffset: 150,
   rightOffset: 10,
   width: 80,
@@ -102,25 +103,26 @@ EdgeSideBar(
 
 ### `EdgeSideBar` Parameters
 
-| Property | Type | Default | Description |
-|----------|------|---------|-------------|
-| `edgeSideBarDirection` | `EdgeSideBarDirection` | Required | Direction of the sidebar (left, right, top, bottom) |
-| `children` | `List<Widget>` | Required | List of widgets to display in the sidebar |
-| `width` | `double` | 80 | Width of the sidebar |
-| `height` | `double` | 200 | Height of the sidebar |
-| `topOffset` | `double` | 0 | Distance from the top of the screen |
-| `rightOffset` | `double` | 0 | Distance from the right edge |
-| `sidebarLeftOffset` | `double` | 0 | Distance from the left edge |
-| `toggleTopOffset` | `double` | 0 | Distance of the toggle button from the top |
-| `toggleLeftOffset` | `double` | 0 | Distance of the toggle button from the left |
-| `borderRadius` | `double` | 36 | Border radius of the sidebar |
-| `backgroundColor` | `Color` | Colors.white | Background color of the sidebar |
-| `defaultToggleColor` | `Color` | Color(0xFFACC9D8) | Color of the toggle button |
-| `initialExpanded` | `bool` | false | Whether the sidebar is initially expanded |
-| `toggleButton` | `Widget?` | null | Custom toggle button widget |
-| `onToggle` | `Function(bool)?` | null | Callback when the sidebar is toggled |
-| `onExpanded` | `VoidCallback?` | null | Callback when the sidebar is expanded |
-| `onCollapsed` | `VoidCallback?` | null | Callback when the sidebar is collapsed |
+| Property | Type | Default | Description                                         |
+|----------|------|---------|-----------------------------------------------------|
+| `edgeSideBarDirection` | `EdgeSideBarDirection` | EdgeSideBarDirection.right | Direction of the sidebar (left, right, top, bottom) |
+| `triggerMode` | `SidebarTriggerMode` | SidebarTriggerMode.both | How the sidebar can be triggered (tap, swipe, both) |
+| `children` | `List<Widget>` | Required | List of widgets to display in the sidebar           |
+| `width` | `double` | 80 | Width of the sidebar                                |
+| `height` | `double` | 200 | Height of the sidebar                               |
+| `topOffset` | `double` | 0 | Distance from the top of the screen                 |
+| `rightOffset` | `double` | 0 | Distance from the right edge                        |
+| `sidebarLeftOffset` | `double` | 0 | Distance from the left edge                         |
+| `toggleTopOffset` | `double` | 0 | Distance of the toggle button from the top          |
+| `toggleLeftOffset` | `double` | 0 | Distance of the toggle button from the left         |
+| `borderRadius` | `double` | 36 | Border radius of the sidebar                        |
+| `backgroundColor` | `Color` | Colors.white | Background color of the sidebar                     |
+| `defaultToggleColor` | `Color` | Color(0xFFACC9D8) | Color of the toggle button                          |
+| `initialExpanded` | `bool` | false | Whether the sidebar is initially expanded           |
+| `toggleButton` | `Widget?` | null | Custom toggle button widget                         |
+| `onToggle` | `Function(bool)?` | null | Callback when the sidebar is toggled                |
+| `onExpanded` | `VoidCallback?` | null | Callback when the sidebar is expanded               |
+| `onCollapsed` | `VoidCallback?` | null | Callback when the sidebar is collapsed              |
 
 ### `EdgeSidePanelScaffold` Parameters
 

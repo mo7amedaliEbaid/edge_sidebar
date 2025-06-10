@@ -11,3 +11,7 @@
 * Precise positioning control
 * Gradient background support
 * Safe area awareness 
+
+## 0.0.1
+
+* Support for horizontal swipe gesture

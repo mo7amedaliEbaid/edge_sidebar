@@ -15,7 +15,7 @@ description: A Flutter package that provides a customizable side panel widget in
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
-version: 0.0.1-beta.1
+version: 0.0.1
 homepage: https://github.com/mo7amedaliEbaid/edge_sidebar
 repository: https://github.com/mo7amedaliEbaid/edge_sidebar.git
 issue_tracker: https://github.com/mo7amedaliEbaid/edge_sidebar/issues

@@ -424,6 +424,7 @@ Widget buildWithSidePanel(
     // Left Sidebar
     EdgeSideBar(
       edgeSideBarDirection: EdgeSideBarDirection.left,
+      triggerMode: SidebarTriggerMode.both,
       topOffset: 20,
       toggleTopOffset: 420,
       sidebarLeftOffset: 10,
@@ -476,133 +477,129 @@ Widget buildWithSidePanel(
         ),
       ],
     ),
-    // Top Sidebar
-    //   SamsungSideBar(
-    //     samsungSideBarDirection: SamsungSideBarDirection.top,
-    //     topOffset: 0,
-    //     sidebarLeftOffset: 10,
-    //     width: 300,
-    //     height: 100,
-    //     borderRadius: 36,
-    //     backgroundColor: Colors.white.withOpacity(0.7),
-    //     defaultToggleColor: const Color(0xFFACC9D8),
-    //     initialExpanded: false,
-    //     toggleButton: Container(
-    //       height: 10,
-    //       width: 50,
-    //       decoration: BoxDecoration(
-    //         color: const Color(0xFFACC9D8),
-    //         borderRadius: BorderRadius.circular(30),
-    //         border: Border.all(
-    //           color: const Color(0xFF9E9E9E),
-    //         ),
-    //       ),
-    //     ),
-    //     children: [
-    //       const SizedBox(width: 20),
-    //       _SidebarIcon(
-    //         path: 'assets/EdgeLighting+ - Good Lock.png',
-    //         onTap: () => Navigator.pushReplacement(
-    //           context,
-    //           MaterialPageRoute(builder: (_) => const ScreenA()),
-    //         ),
-    //         selected: selectedScreen == ScreenType.screenA,
-    //       ),
-    //       const SizedBox(width: 5),
-    //       _SidebarIcon(
-    //         path: 'assets/Samsung Walk Mode.png',
-    //         onTap: () => Navigator.pushReplacement(
-    //           context,
-    //           MaterialPageRoute(builder: (_) => const ScreenB()),
-    //         ),
-    //         selected: selectedScreen == ScreenType.screenB,
-    //       ),
-    //       const SizedBox(width: 5),
-    //       _SidebarIcon(
-    //         path: 'assets/Ultra Data Saving.png',
-    //         onTap: () => Navigator.pushReplacement(
-    //           context,
-    //           MaterialPageRoute(builder: (_) => const ScreenC()),
-    //         ),
-    //         selected: selectedScreen == ScreenType.screenC,
-    //       ),
-    //       const VerticalDashedDivider(),
-    //       _SidebarIcon(
-    //         path: 'assets/VR Gallery.png',
-    //         onTap: () => Navigator.push(
-    //             context, MaterialPageRoute(builder: (_) => const ScreenA())),
-    //       ),
-
-    //       const SizedBox(width: 20),
-    //     ],
-    //   ),
-    //   // Bottom Sidebar
-    //   SamsungSideBar(
-    //     samsungSideBarDirection: SamsungSideBarDirection.bottom,
-
-    //     topOffset: 0,
-    //     sidebarLeftOffset: 10,
-    //     width: 200,
-    //     height: 60,
-    //     borderRadius: 36,
-    //     backgroundColor: Colors.white.withOpacity(0.7),
-    //     defaultToggleColor: const Color(0xFFACC9D8),
-    //     initialExpanded: false,
-    //     toggleButton: Container(
-    //       height: 10,
-    //       width: 150,
-    //       decoration: BoxDecoration(
-    //         color: const Color(0xFFACC9D8),
-    //         borderRadius: BorderRadius.circular(30),
-    //         border: Border.all(
-    //           color: const Color(0xFF9E9E9E),
-    //         ),
-    //       ),
-    //     ),
-    //     children: [
-    //       _SidebarIcon(
-    //         path: 'assets/EdgeLighting+ - Good Lock.png',
-    //         onTap: () => Navigator.pushReplacement(
-    //           context,
-    //           MaterialPageRoute(builder: (_) => const ScreenA()),
-    //         ),
-    //         selected: selectedScreen == ScreenType.screenA,
-    //       ),
-    //       _SidebarIcon(
-    //         path: 'assets/Samsung Walk Mode.png',
-    //         onTap: () => Navigator.pushReplacement(
-    //           context,
-    //           MaterialPageRoute(builder: (_) => const ScreenB()),
-    //         ),
-    //         selected: selectedScreen == ScreenType.screenB,
-    //       ),
-    //       _SidebarIcon(
-    //         path: 'assets/Ultra Data Saving.png',
-    //         onTap: () => Navigator.pushReplacement(
-    //           context,
-    //           MaterialPageRoute(builder: (_) => const ScreenC()),
-    //         ),
-    //         selected: selectedScreen == ScreenType.screenC,
-    //       ),
-    //       const DashedDivider(),
-    //       _SidebarIcon(
-    //         path: 'assets/VR Gallery.png',
-    //         onTap: () => Navigator.push(
-    //             context, MaterialPageRoute(builder: (_) => const ScreenA())),
-    //       ),
-    //       _SidebarIcon(
-    //         path: 'assets/Wi-Fi Calling.png',
-    //         onTap: () => Navigator.push(
-    //             context, MaterialPageRoute(builder: (_) => const ScreenB())),
-    //       ),
-    //       _SidebarIcon(
-    //         path: 'assets/Write on PDF.png',
-    //         onTap: () => Navigator.push(
-    //             context, MaterialPageRoute(builder: (_) => const ScreenC())),
-    //       ),
-    //     ],
-    //   ),
-    // ],
+    //  Top Sidebar
+    /*   EdgeSideBar(
+      edgeSideBarDirection: EdgeSideBarDirection.top,
+      topOffset: 0,
+      sidebarLeftOffset: 10,
+      width: 300,
+      height: 100,
+      borderRadius: 36,
+      backgroundColor: Colors.white.withOpacity(0.7),
+      defaultToggleColor: const Color(0xFFACC9D8),
+      initialExpanded: false,
+      toggleButton: Container(
+        height: 10,
+        width: 50,
+        decoration: BoxDecoration(
+          color: const Color(0xFFACC9D8),
+          borderRadius: BorderRadius.circular(30),
+          border: Border.all(
+            color: const Color(0xFF9E9E9E),
+          ),
+        ),
+      ),
+      children: [
+        const SizedBox(width: 20),
+        _SidebarIcon(
+          path: 'assets/EdgeLighting+ - Good Lock.png',
+          onTap: () => Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (_) => const ScreenA()),
+          ),
+          selected: selectedScreen == ScreenType.screenA,
+        ),
+        const SizedBox(width: 5),
+        _SidebarIcon(
+          path: 'assets/Samsung Walk Mode.png',
+          onTap: () => Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (_) => const ScreenB()),
+          ),
+          selected: selectedScreen == ScreenType.screenB,
+        ),
+        const SizedBox(width: 5),
+        _SidebarIcon(
+          path: 'assets/Ultra Data Saving.png',
+          onTap: () => Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (_) => const ScreenC()),
+          ),
+          selected: selectedScreen == ScreenType.screenC,
+        ),
+        const VerticalDashedDivider(),
+        _SidebarIcon(
+          path: 'assets/VR Gallery.png',
+          onTap: () => Navigator.push(
+              context, MaterialPageRoute(builder: (_) => const ScreenA())),
+        ),
+        const SizedBox(width: 20),
+      ],
+    ),*/
+    // Bottom Sidebar
+/*    EdgeSideBar(
+      edgeSideBarDirection: EdgeSideBarDirection.bottom,
+      width: 100,
+      height: 60,
+      borderRadius: 36,
+      backgroundColor: Colors.white.withOpacity(0.7),
+      defaultToggleColor: const Color(0xFFACC9D8),
+      initialExpanded: false,
+      toggleButton: Container(
+        height: 10,
+        width: 50,
+        decoration: BoxDecoration(
+          color: const Color(0xFFACC9D8),
+          borderRadius: BorderRadius.circular(30),
+          border: Border.all(
+            color: const Color(0xFF9E9E9E),
+          ),
+        ),
+      ),
+      children: [
+        _SidebarIcon(
+          path: 'assets/EdgeLighting+ - Good Lock.png',
+          onTap: () => Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (_) => const ScreenA()),
+          ),
+          selected: selectedScreen == ScreenType.screenA,
+        ),
+        _SidebarIcon(
+          path: 'assets/Samsung Walk Mode.png',
+          onTap: () => Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (_) => const ScreenB()),
+          ),
+          selected: selectedScreen == ScreenType.screenB,
+        ),
+        _SidebarIcon(
+          path: 'assets/Ultra Data Saving.png',
+          onTap: () => Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (_) => const ScreenC()),
+          ),
+          selected: selectedScreen == ScreenType.screenC,
+        ),
+        const DashedDivider(),
+        _SidebarIcon(
+          path: 'assets/VR Gallery.png',
+          onTap: () => Navigator.push(
+              context, MaterialPageRoute(builder: (_) => const ScreenA())),
+        ),
+        _SidebarIcon(
+          path: 'assets/Wi-Fi Calling.png',
+          onTap: () => Navigator.push(
+              context, MaterialPageRoute(builder: (_) => const ScreenB())),
+        ),
+        _SidebarIcon(
+          path: 'assets/Write on PDF.png',
+          onTap: () => Navigator.push(
+              context, MaterialPageRoute(builder: (_) => const ScreenC())),
+        ),
+      ],
+    ),*/
+//    ],
   ]);
 }
 
