@@ -14,4 +14,6 @@
 
 ## 0.0.1
 
-* Support for horizontal swipe gesture
+### Added
+
+* SidebarTriggerMode enum to control tap/swipe behavior
